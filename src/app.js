@@ -1,11 +1,42 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+let who = [
+  "My creepy uncle ",
+  "Seven dwarves ",
+  "Taco Bell ",
+  "Celine Dion ",
+  "Your Ex ",
+  "Miss Peru "
+];
+let action = [
+  "kissed ",
+  "sued ",
+  "offered to assasinate ",
+  "puked on ",
+  "set on fire ",
+  "smashed "
+];
+let what = [
+  "Sweeden ",
+  "the pope ",
+  "Ali Baba ",
+  "your mother ",
+  "the easter bunny ",
+  "Steve Jobs "
+];
+let when = [
+  "just 5 minutes ago",
+  "not officially yet",
+  "at tea time",
+  ",god know's when",
+  "during the world cup",
+  "last christmas"
+];
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+window.onload = function newExcuse() {
+  let excuse =
+    who[Math.floor(Math.random() * who.length)] +
+    action[Math.floor(Math.random() * action.length)] +
+    what[Math.floor(Math.random() * what.length)] +
+    when[Math.floor(Math.random() * when.length)];
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
+  document.getElementById("excuse").innerHTML = excuse;
 };
