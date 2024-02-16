@@ -31,7 +31,7 @@ let when = [
   "last christmas"
 ];
 
-window.onload = function newExcuse() {
+const newExcuse = () => {
   let excuse =
     who[Math.floor(Math.random() * who.length)] +
     action[Math.floor(Math.random() * action.length)] +
@@ -40,3 +40,11 @@ window.onload = function newExcuse() {
 
   document.getElementById("excuse").innerHTML = excuse;
 };
+
+window.onload = newExcuse();
+
+document.getElementById("excuseButton").onclick = function() {
+  newExcuse();
+};
+
+document.getElementById("excuseButton").style;
